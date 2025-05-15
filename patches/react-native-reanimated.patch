@@ -1,0 +1,66 @@
+diff --git a/src/mock.ts b/src/mock.ts
+index 3d8e3f8a67c2f149ae5a463813017266fde6353e..fbabe1dd1edae86bb9e394ec62e4652142ef25ef 100644
+--- a/src/mock.ts
++++ b/src/mock.ts
+@@ -1,37 +1,37 @@
+ /* eslint-disable n/no-callback-literal */
+ 'use strict';
+ 
++import {
++  Animated as AnimatedRN,
++  Image as ImageRN,
++  Text as TextRN,
++  View as ViewRN,
++  processColor as processColorRN,
++} from 'react-native';
+ import type {
+-  WithSpringConfig,
+-  WithTimingConfig,
+-  WithDecayConfig,
+   AnimatableValue,
+   AnimationCallback,
+   EventHandler,
+   EventHandlerProcessed,
++  WithDecayConfig,
++  WithSpringConfig,
++  WithTimingConfig,
+ } from './index';
+ import {
++  ColorSpace,
++  Extrapolation,
+   IOSReferenceFrame,
+   InterfaceOrientation,
+   KeyboardState,
+   ReduceMotion,
+   SensorType,
+-  ColorSpace,
+-  Extrapolation,
+   SharedTransitionType,
+-  withReanimatedTimer,
+-  advanceAnimationByTime,
+   advanceAnimationByFrame,
+-  setUpTests,
++  advanceAnimationByTime,
+   getAnimatedStyle,
++  setUpTests,
++  withReanimatedTimer,
+ } from './index';
+-import {
+-  View as ViewRN,
+-  Text as TextRN,
+-  Image as ImageRN,
+-  Animated as AnimatedRN,
+-  processColor as processColorRN,
+-} from 'react-native';
+ 
+ const NOOP = () => {};
+ const NOOP_FACTORY = () => NOOP;
+@@ -114,7 +114,7 @@ const hook = {
+   }),
+   // useFrameCallback: ADD ME IF NEEDED
+   useAnimatedKeyboard: () => ({ height: 0, state: 0 }),
+-  // useScrollViewOffset: ADD ME IF NEEDED
++  useScrollViewOffset: () => ({ value: 0 }),
+ };
+ 
+ const animation = {

@@ -4,6 +4,11 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+patchedDependencies:
+  react-native-reanimated:
+    hash: b43d3896fd3fd104f7f3972c044e3df3a63c7ca90e71b84057e5bac7de7736f6
+    path: patches/react-native-reanimated.patch
+
 importers:
 
   .:
@@ -43,7 +48,7 @@ importers:
         version: 7.0.5(expo@52.0.46(@babel/core@7.27.1)(@babel/preset-env@7.27.2(@babel/core@7.27.1))(@expo/metro-runtime@5.0.4(react-native@0.77.2(@babel/core@7.27.1)(@babel/preset-env@7.27.2(@babel/core@7.27.1))(@types/react@18.3.21)(react@18.3.1)))(react-native-webview@13.12.5(react-native@0.77.2(@babel/core@7.27.1)(@babel/preset-env@7.27.2(@babel/core@7.27.1))(@types/react@18.3.21)(react@18.3.1))(react@18.3.1))(react-native@0.77.2(@babel/core@7.27.1)(@babel/preset-env@7.27.2(@babel/core@7.27.1))(@types/react@18.3.21)(react@18.3.1))(react@18.3.1))(react-native@0.77.2(@babel/core@7.27.1)(@babel/preset-env@7.27.2(@babel/core@7.27.1))(@types/react@18.3.21)(react@18.3.1))(react@18.3.1)
       expo-router:
         specifier: ~4.0.21
-        version: 4.0.21(b7fc22ed634859f314917bb8baf36efb)
+        version: 4.0.21(7302ea4a12c0fd384b204aef19f857e2)
       expo-splash-screen:
         specifier: ~0.29.24
         version: 0.29.24(expo@52.0.46(@babel/core@7.27.1)(@babel/preset-env@7.27.2(@babel/core@7.27.1))(@expo/metro-runtime@5.0.4(react-native@0.77.2(@babel/core@7.27.1)(@babel/preset-env@7.27.2(@babel/core@7.27.1))(@types/react@18.3.21)(react@18.3.1)))(react-native-webview@13.12.5(react-native@0.77.2(@babel/core@7.27.1)(@babel/preset-env@7.27.2(@babel/core@7.27.1))(@types/react@18.3.21)(react@18.3.1))(react@18.3.1))(react-native@0.77.2(@babel/core@7.27.1)(@babel/preset-env@7.27.2(@babel/core@7.27.1))(@types/react@18.3.21)(react@18.3.1))(react@18.3.1))
@@ -73,7 +78,7 @@ importers:
         version: 2.20.2(react-native@0.77.2(@babel/core@7.27.1)(@babel/preset-env@7.27.2(@babel/core@7.27.1))(@types/react@18.3.21)(react@18.3.1))(react@18.3.1)
       react-native-reanimated:
         specifier: ~3.16.1
-        version: 3.16.7(@babel/core@7.27.1)(react-native@0.77.2(@babel/core@7.27.1)(@babel/preset-env@7.27.2(@babel/core@7.27.1))(@types/react@18.3.21)(react@18.3.1))(react@18.3.1)
+        version: 3.16.7(patch_hash=b43d3896fd3fd104f7f3972c044e3df3a63c7ca90e71b84057e5bac7de7736f6)(@babel/core@7.27.1)(react-native@0.77.2(@babel/core@7.27.1)(@babel/preset-env@7.27.2(@babel/core@7.27.1))(@types/react@18.3.21)(react@18.3.1))(react@18.3.1)
       react-native-safe-area-context:
         specifier: 4.12.0
         version: 4.12.0(react-native@0.77.2(@babel/core@7.27.1)(@babel/preset-env@7.27.2(@babel/core@7.27.1))(@types/react@18.3.21)(react@18.3.1))(react@18.3.1)
@@ -8916,7 +8921,7 @@ snapshots:
     dependencies:
       invariant: 2.2.4
 
-  expo-router@4.0.21(b7fc22ed634859f314917bb8baf36efb):
+  expo-router@4.0.21(7302ea4a12c0fd384b204aef19f857e2):
     dependencies:
       '@expo/metro-runtime': 4.0.1(react-native@0.77.2(@babel/core@7.27.1)(@babel/preset-env@7.27.2(@babel/core@7.27.1))(@types/react@18.3.21)(react@18.3.1))
       '@expo/server': 0.5.3
@@ -8937,7 +8942,7 @@ snapshots:
       semver: 7.6.3
       server-only: 0.0.1
     optionalDependencies:
-      react-native-reanimated: 3.16.7(@babel/core@7.27.1)(react-native@0.77.2(@babel/core@7.27.1)(@babel/preset-env@7.27.2(@babel/core@7.27.1))(@types/react@18.3.21)(react@18.3.1))(react@18.3.1)
+      react-native-reanimated: 3.16.7(patch_hash=b43d3896fd3fd104f7f3972c044e3df3a63c7ca90e71b84057e5bac7de7736f6)(@babel/core@7.27.1)(react-native@0.77.2(@babel/core@7.27.1)(@babel/preset-env@7.27.2(@babel/core@7.27.1))(@types/react@18.3.21)(react@18.3.1))(react@18.3.1)
     transitivePeerDependencies:
       - '@react-native-masked-view/masked-view'
       - react
@@ -11043,7 +11048,7 @@ snapshots:
       react: 18.3.1
       react-native: 0.77.2(@babel/core@7.27.1)(@babel/preset-env@7.27.2(@babel/core@7.27.1))(@types/react@18.3.21)(react@18.3.1)
 
-  react-native-reanimated@3.16.7(@babel/core@7.27.1)(react-native@0.77.2(@babel/core@7.27.1)(@babel/preset-env@7.27.2(@babel/core@7.27.1))(@types/react@18.3.21)(react@18.3.1))(react@18.3.1):
+  react-native-reanimated@3.16.7(patch_hash=b43d3896fd3fd104f7f3972c044e3df3a63c7ca90e71b84057e5bac7de7736f6)(@babel/core@7.27.1)(react-native@0.77.2(@babel/core@7.27.1)(@babel/preset-env@7.27.2(@babel/core@7.27.1))(@types/react@18.3.21)(react@18.3.1))(react@18.3.1):
     dependencies:
       '@babel/core': 7.27.1
       '@babel/plugin-transform-arrow-functions': 7.27.1(@babel/core@7.27.1)
